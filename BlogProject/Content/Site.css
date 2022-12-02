@@ -47,7 +47,7 @@ transition: all 0.4s;
 .backbtn {
 display: inline-block;
 transition: all 0.4s;
-margin-top: 50px;
+margin-top: 35px;
 font-size: 18px;
 }
 .backbtn a{
@@ -71,4 +71,9 @@ transition: all 0.4s;
 }
 table {
 font-size: 18px;
+margin-bottom:20px;
+}
+nav {
+overflow: hidden;
+margin-bottom: 30px;
 }

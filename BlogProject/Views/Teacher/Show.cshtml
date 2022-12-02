@@ -1,20 +1,24 @@
-﻿@model BlogProject.Models.Teacher 
+﻿@model BlogProject.Models.Teacher
 @{
     ViewBag.Title = "Show";
 }
 
-<button class="backbtn"><a href="/Teacher/List">Back To Teachers</a></button>
 <div id="containershow">
+    <button class="backbtn"><a href="/Teacher/List">Back To Teachers</a></button>
     <h2>@Model.TeacherFname @Model.TeacherLname </h2>
     <table>
         <tr>
-            <td>Employee number:</td><td>&nbsp;@Model.EmployeeNumber</td>
+            <td>Employee number:</td>
+            <td>&nbsp;@Model.EmployeeNumber</td>
         </tr>
         <tr>
-            <td>Hire Date:</td><td>&nbsp;@Model.HireDate</td>
+            <td>Hire Date:</td>
+            <td>&nbsp;@Model.HireDate</td>
         </tr>
         <tr>
-            <td>Salary:</td><td>&nbsp;@Model.Salary</td>
+            <td>Salary:</td>
+            <td>&nbsp;@Model.Salary</td>
         </tr>
     </table>
+    <button style="margin-top: 20px;"><a href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete</a></button>
 </div>

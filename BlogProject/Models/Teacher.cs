@@ -13,5 +13,7 @@ namespace BlogProject.Models
         public string EmployeeNumber;
         public DateTime HireDate;
         public decimal Salary;
+
+        public Teacher() { }
     }
 }

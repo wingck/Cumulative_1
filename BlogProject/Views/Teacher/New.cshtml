@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Teacher</h2>
+<form method="POST" action="/Teacher/Create" name="ixdForm">
+    <div>
+        <label for="TeacherFname">First Name:</label>
+        <input type="text" id="TeacherFname" name="TeacherFname" />
+    </div>
+    <div>
+        <label for="TeacherLname">Last Name:</label>
+        <input type="text" id="TeacherLname" name="TeacherLname" />
+    </div>
+    <div>
+        <label for="EmployeeNumber">Employee Number:</label>
+        <input type="text" id="EmployeeNumber" name="EmployeeNumber" />
+    </div>
+    <div>
+        <label for="HireDate">Hire Date:</label>
+        <input type="text" id="HireDate" name="HireDate" />
+    </div>
+    <div>
+        <label for="Salary">Salary:</label>
+        <input type="text" id="Salary" name="Salary" />
+    </div>
+    <div>
+        <input type="submit" value="Create Teacher" />
+    </div>
+</form>
+<script>
+    var inputForm = document.forms.ixdForm;
+    inputForm.onsubmit = processForm;
+    function processForm() {
+        var in_fName = inputForm.TeacherFname;
+        var in_lName = inputForm.TeacherLname;
+        var in_emp = inputForm.EmployeeNumber;
+        var in_date = inputForm.HireDate;
+        var in_salary = inputForm.Salary;
+
+        if (in_fName.value === "") {
+            in_fName.style.background = "red";
+            in_fName.focus();
+            return false;
+        } else {
+            in_lName.style.background = "white";
+        }
+        if (in_lName.value === "") {
+            in_lName.style.background = "red";
+            in_lName.focus();
+            return false;
+        } else {
+            in_lName.style.background = "white";
+        }
+        if (in_emp.value === "") {
+            in_emp.style.background = "red";
+            in_emp.focus();
+            return false;
+        } else {
+            in_emp.style.background = "white";
+        }
+        if (in_date.value === "") {
+            in_date.style.background = "red";
+            in_date.focus();
+            return false;
+        } else {
+            in_date.style.background = "white";
+        }
+        if (in_salary.value === "") {
+            in_salary.style.background = "red";
+            in_salary.focus();
+            return false;
+        } 
+    }
+</script>
